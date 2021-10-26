@@ -1,0 +1,125 @@
+.corBorda{
+    background-color: #F6DCE1;
+}
+
+.observacoes{
+
+    border: 1px solid #E58383;
+    width: 200px;
+
+}
+
+.tituloProduto{
+
+font-size: 60px;
+}
+
+.subTituloProduto{
+
+    font-size: 40px;
+}
+
+.bordaBottom{
+
+border-bottom: 1px solid gray;
+padding-bottom: 20px;
+
+}
+
+.botao{
+
+    background-color: #F69E9E;
+    color: white;
+    padding: 8px;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+body{
+    background-color: #FAF9F9;
+}
+
+.titulo{
+
+    color: #E58383;
+
+}
+
+.botao:hover{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #E64747;
+}
+
+.cont{
+    
+    overflow:auto;
+    width: 350px;
+
+  }
+
+.cont img {
+    max-width: 100%;
+    -moz-transition: all 2s;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+  }
+
+.cont:hover img {
+    -moz-transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+    transform: scale(1.8);
+  }
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #F2A1A1;
+    color: black;
+        
+    }
+    
+input[type=checkbox]:before {
+    content: "";
+    border-radius: 15px;
+    border: 1px solid #F2A1A1;
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    color: black;
+    background-color: #FAEDED;
+    }
+    
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: 1px solid #BC3535;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 5px;
+    left: 9px;
+}
+
+.tamanhoImg{
+    width: 500px;
+}
+
+@media (max-width: 1200px)
+{
+ 
+    .tamanhoImg{
+
+        width: 300px;
+    
+    }
+
+}

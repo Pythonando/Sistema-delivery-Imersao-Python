@@ -1,0 +1,61 @@
+
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="{% static 'produto/css/css.css' %}" >
+    <script src="{% static 'pedido/js/js.js' %}"></script>
+    {% block 'head'%}
+
+    {% endblock %}
+    <title>Fondue delícia</title>
+
+  </head>
+  <body>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-light corBorda">
+        <a class="navbar-brand" href="{% url 'home'%}">Fondue delícia</a>
+        <a class="navbar-brand" href="{% url 'ver_carrinho' %}">{{carrinho}}x<svg xmlns="http://www.w3.org/2000/svg"width="1.2em" height="1.2em" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg></a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+           
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categorias
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            
+                {% for i in categorias%}
+                    <a class="dropdown-item" href="{% url 'categoria' i.id %}">{{i}}</a>
+                {% endfor %}
+
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {% block 'conteudo' %}
+        
+      {% endblock %}
+
+      <br>
+      <br>
+      <br>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+ 
+  </body>
+</html>
